@@ -1,0 +1,181 @@
+*{
+    padding: 0;
+    margin: 0;
+    
+}
+body{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-family: cooper;
+    background-color: rgb(97, 226, 198);
+}
+.container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin:100px 0px ;
+    
+    
+}
+.container .box{
+    width: 600px;
+    height: 400px;
+    position: relative;
+    margin: 10px 0;
+    background-color: cornsilk;
+    color:rgba(0 ,0, 0, 0.5);
+    display: flex;
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.container .box4{
+    background:  rgb(97, 226, 198);
+    border-radius:15px;
+    box-shadow: inset -12px -15px 15px rgba(0, 0, 0, 0.3),
+               inset 12px 15px 15px rgba(0, 0, 0, 0.3);
+               transition: .5s;
+            }
+
+.container .box4::before{
+   content:'';
+    width:80%;
+    height: 20px;
+    position: absolute;
+    bottom:-45px;
+    background-color:rgba(0, 0, 0, 0.2) ;
+    border-radius: 50%;
+    filter:blur(5px)
+
+}
+.container .box4:hover{
+   
+/* background-color: rgb(163, 233, 97); */
+transition: .5s;
+}
+
+.nav{
+    width: 100%;
+    height:30px;
+    position: absolute;
+    top:20px;
+    color:rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+   background-color: rgb(255, 149, 10);
+   border-radius: 50px;
+}
+.head{
+    margin:0px 30px;
+}
+.subject .sName{
+    text-align: center;
+    background-color: rgb(97, 226, 198);
+    position: relative;
+    left:-30px;
+    margin:10px 5px;
+    padding:10px 5px;
+    border-radius:5px;
+    box-shadow:  -5px -5px 10px rgba(0, 0, 0, 0.5),
+    3px 3px 3px rgb(252, 252, 252)
+}
+
+.in{
+    text-align: center;
+    background-color: rgb(97, 226, 198);
+    position: relative;
+    right:-10px;
+    margin:15px 5px;
+    padding:10px 5px;
+    border-radius:5px;
+    width:100px;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: inset 10px 10px 20px rgba(0, 0, 0, 0.3);
+    border:none;
+    box-shadow: inset -5px -5px 10px rgba(0, 0, 0, 0.5),
+    inset 3px 3px 3px rgba(0 ,0, 0, 0.5)
+    
+}
+.subjectG{
+    text-align: center;
+    background-color: rgb(97, 226, 198);
+    position: relative;
+    right:-40px;
+    margin:15px 5px;
+    padding:10px 5px;
+    border-radius:5px;
+    width:100px;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: inset 10px 10px 20px rgba(0, 0, 0, 0.3);
+    border:none;
+    box-shadow: inset -5px -5px 10px rgba(0, 0, 0, 0.5),
+    inset 3px 3px 3px rgba(0 ,0, 0, 0.5)
+}
+#total{
+    position: relative;
+    top:20px;
+    background-color: rgb(255, 157, 10);
+}
+#total-input{
+    position: relative;
+    top:17px;
+    background-color: rgb(97, 226, 198);
+    height:45px;
+   box-shadow:  -5px -5px 10px rgba(0, 0, 0, 0.5),
+                3px 3px 3px rgb(252, 252, 252)
+
+}
+#grade-result{
+    position: relative;
+    top:17px;
+    background-color: rgb(97, 226, 198);
+    height:45px;
+   box-shadow: -3px -3px 7px rgb(39, 39, 39),
+                3px 3px 7px rgb(39, 39, 39)
+}
+#lock{
+    position: absolute;
+    left: 30px;
+    width: 40px;
+    height: 40px;
+    bottom: 15px;
+    display: none;
+    transition:.9s;
+}
+#unlock{
+    position: absolute;
+    left: 30px;
+    width: 40px;
+    height: 40px;
+    bottom: 15px;
+    display: none;
+    transition: .9s;
+}
+.generate-btn{
+    text-align: center;
+    /* margin-top: 140px; */
+    position:absolute;
+    right: 8px ;
+    width: 80px;
+    height: 40px;
+    padding: 10px;
+    border-radius: 10%;
+    border: none;
+    background-color: #fde617;
+    color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+    box-shadow:  5px 5px 10px rgb(70, 66, 65);
+   
+}

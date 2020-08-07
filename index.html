@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css" integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Dynamic Grade Count</h1>
+        <div class="box box4">
+            <div class="nav"><h4 class="head">Subject</h4> <h4 class="head">Marks</h4><h4 class="head">Grade</h4></div>
+            <div class="subject">
+                <h5 class="sName">Bangla</h5>
+                <h5 class="sName">English</h5>
+                <h5 class="sName">Math</h5>
+                <h5 class="sName">Science</h5>
+                <h5 class="sName" id = 'total'>Total</h5>
+            </div>
+            <div class="input">
+                <input class="in" type="text" name="" id="input1" >
+                <input class="in" type="text" name="" id="input2">
+                <input class="in" type="text" name="" id="input3">
+                <input class="in" type="text" name="" id="input4">
+                <input class="in" type="text" name="" id="total-input" disabled >
+            </div>
+            
+            <div class="grade">
+                <input class="subjectG" type="text" name="" id="grade1" disabled>
+                <input class="subjectG" type="text" name="" id="grade2" disabled>
+                <input class="subjectG" type="text" name="" id="grade3" disabled>
+                <input class="subjectG" type="text" name="" id="grade4" disabled>
+                <input class="subjectG" type="text" name="" id="grade-result" disabled >
+                <button class="generate-btn" id ='btn'>Check</button>
+
+                <svg id = "lock" width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-lock-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2.5 9a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-7a2 2 0 0 1-2-2V9z"/>
+                    <path fill-rule="evenodd" d="M4.5 4a3.5 3.5 0 1 1 7 0v3h-1V4a2.5 2.5 0 0 0-5 0v3h-1V4z"/>
+                  </svg>
+                  <svg id ="unlock"width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-unlock-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M.5 9a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-7a2 2 0 0 1-2-2V9z"/>
+                    <path fill-rule="evenodd" d="M8.5 4a3.5 3.5 0 1 1 7 0v3h-1V4a2.5 2.5 0 0 0-5 0v3h-1V4z"/>
+                  </svg>
+            </div>
+            </div>
+        </div>
+    <script>
+       document.getElementById('btn').addEventListener('click',function(){
+           console.log('clicked');
+        
+    
+      
+        let marks =document.getElementById('input1').value
+         if (marks >= 90 ){
+             document.getElementById('grade1').value = "A+"
+        }
+       else if (marks ==""){
+        document.getElementById('grade1').value="Insert"
+        document.getElementById('input1').value ="0"
+        }
+       else if(marks >= 80){
+            document.getElementById('grade1').value = "A"
+        }
+        else if(marks >= 70){
+            document.getElementById('grade1').value = "A-"
+        }
+        else if(marks >= 60){
+            document.getElementById('grade1').value = "B+"
+        }
+        else if(marks >= 50){
+            document.getElementById('grade1').value = "B"
+        }
+        else if(marks >= 40){
+            document.getElementById('grade1').value = "B-"
+        }
+       else if(marks >= 33){
+            document.getElementById('grade1').value = "C"
+        }
+        else{
+            document.getElementById('grade1').value = "F"
+        }
+
+
+        //for english
+        let english = document.getElementById('input2').value
+
+    if (english >= 90 ){
+             document.getElementById('grade2').value = "A+"
+        }
+    else if (english ==""){
+        document.getElementById('grade2').value="Insert"
+        document.getElementById('input2').value ="0"
+    }
+       else if(english >= 80){
+            document.getElementById('grade2').value = "A"
+        }
+        else if(english >= 70){
+            document.getElementById('grade2').value = "A-"
+        }
+        else if(english >= 60){
+            document.getElementById('grade2').value = "B+"
+        }
+        else if(english >= 50){
+            document.getElementById('grade2').value = "B"
+        }
+        else if(english >= 40){
+            document.getElementById('grade2').value = "B-"
+        }
+       else if(english >= 33){
+            document.getElementById('grade2').value = "C"
+        }
+        else{
+            document.getElementById('grade2').value = "F"
+        }
+       
+        // for math 
+
+        let math =document.getElementById('input3').value
+         if (math>= 90 ){
+             document.getElementById('grade3').value = "A+"
+        }
+        else if (math ==""){
+            document.getElementById('grade3').value="Insert"
+            document.getElementById('input3').value ="0"
+        }
+       else if(math >= 80){
+            document.getElementById('grade3').value = "A"
+        }
+        else if(math >= 70){
+            document.getElementById('grade3').value = "A-"
+        }
+        else if(math >= 60){
+            document.getElementById('grade3').value = "B+"
+        }
+        else if(math >= 50){
+            document.getElementById('grade3').value = "B"
+        }
+        else if(math >= 40){
+            document.getElementById('grade3').value = "B-"
+        }
+       else if(math >= 33){
+            document.getElementById('grade3').value = "C"
+        }
+        else{
+            document.getElementById('grade3').value = "F"
+        }
+
+        //for science
+        let science =document.getElementById('input4').value
+         if (science >= 90 ){
+             document.getElementById('grade4').value = "A+"
+        }
+       else if (science ==""){
+            document.getElementById('grade4').value="Insert"
+            document.getElementById('input4').value ="0"
+        }
+       else if(science >= 80){
+            document.getElementById('grade4').value = "A"
+        }
+        else if(science >= 70){
+            document.getElementById('grade4').value = "A-"
+        }
+        else if(science >= 60){
+            document.getElementById('grade4').value = "B+"
+        }
+        else if(science >= 50){
+            document.getElementById('grade4').value = "B"
+        }
+        else if(science >= 40){
+            document.getElementById('grade4').value = "B-"
+        }
+       else if(science >= 33){
+            document.getElementById('grade4').value = "C"
+        }
+        else{
+            document.getElementById('grade4').value = "F"
+        }
+    })
+
+    document.getElementById('btn').addEventListener('click',function(){
+        let marks =document.getElementById('input1').value
+            marks = parseInt(marks) 
+            
+            english =document.getElementById('input2').value
+            english = parseInt(english)
+
+            math =document.getElementById('input3').value
+                math= parseInt(math)
+            
+            science=document.getElementById('input4').value
+                science= parseInt(science)
+       
+        totalMarks = marks + english + math + science
+        
+        document.getElementById('total-input').value = marks + english + math + science
+       
+       
+       
+       
+        if (totalMarks / 4 >= 90 ){
+             document.getElementById('grade-result').value = "A+"
+                  document.getElementById('lock').style.display='none'
+                    document.getElementById('unlock').style.display='block'
+        }
+       else if (totalMarks / 4 ==""){
+            document.getElementById('grade-result').value="Insert"
+            document.getElementById('input4').value ="0"
+        }
+       else if(totalMarks / 4 >= 80){
+            document.getElementById('grade-result').value = "A"
+            document.getElementById('lock').style.display='none'
+                    document.getElementById('unlock').style.display='block'
+        }
+        else if(totalMarks / 4 >= 70){
+            document.getElementById('grade-result').value = "A-"
+            document.getElementById('lock').style.display='none'
+                    document.getElementById('unlock').style.display='block'
+        }
+        else if(totalMarks / 4 >= 60){
+            document.getElementById('grade-result').value = "B+"
+            document.getElementById('lock').style.display='none'
+                    document.getElementById('unlock').style.display='block'
+        }
+        else if(totalMarks / 4 >= 50){
+            document.getElementById('grade-result').value = "B"
+            document.getElementById('lock').style.display='none'
+                    document.getElementById('unlock').style.display='block'
+                    
+        }
+        else if(totalMarks / 4 >= 40){
+            document.getElementById('grade-result').value = "B-"
+            document.getElementById('lock').style.display='none'
+                    document.getElementById('unlock').style.display='block'
+        }
+       else if(totalMarks / 4 >= 33){
+            document.getElementById('grade-result').value = "C"
+            document.getElementById('lock').style.display='none'
+            document.getElementById('unlock').style.display='block'
+        }
+        else{
+            document.getElementById('grade-result').value = "F"
+            document.getElementById('grade-result').style.backgroundColor="tomato"
+            document.getElementById('lock').style.display='block'
+            document.getElementById('unlock').style.display='none'
+        }
+      
+    })
+    
+    </script>
+</div>
+</body>
+</html>
