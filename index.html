@@ -50,139 +50,14 @@
        document.getElementById('btn').addEventListener('click',function(){
            console.log('clicked');
         
-    
-      
-        let marks =document.getElementById('input1').value
-         if (marks >= 90 ){
-             document.getElementById('grade1').value = "A+"
-        }
-       else if (marks ==""){
-        document.getElementById('grade1').value="Insert"
-        document.getElementById('input1').value ="0"
-        }
-       else if(marks >= 80){
-            document.getElementById('grade1').value = "A"
-        }
-        else if(marks >= 70){
-            document.getElementById('grade1').value = "A-"
-        }
-        else if(marks >= 60){
-            document.getElementById('grade1').value = "B+"
-        }
-        else if(marks >= 50){
-            document.getElementById('grade1').value = "B"
-        }
-        else if(marks >= 40){
-            document.getElementById('grade1').value = "B-"
-        }
-       else if(marks >= 33){
-            document.getElementById('grade1').value = "C"
-        }
-        else{
-            document.getElementById('grade1').value = "F"
-        }
+        gradeCount('input1','grade1')
+        gradeCount('input2','grade2')
+        gradeCount('input3','grade3')
+        gradeCount('input4','grade4')
 
-
-        //for english
-        let english = document.getElementById('input2').value
-
-    if (english >= 90 ){
-             document.getElementById('grade2').value = "A+"
-        }
-    else if (english ==""){
-        document.getElementById('grade2').value="Insert"
-        document.getElementById('input2').value ="0"
-    }
-       else if(english >= 80){
-            document.getElementById('grade2').value = "A"
-        }
-        else if(english >= 70){
-            document.getElementById('grade2').value = "A-"
-        }
-        else if(english >= 60){
-            document.getElementById('grade2').value = "B+"
-        }
-        else if(english >= 50){
-            document.getElementById('grade2').value = "B"
-        }
-        else if(english >= 40){
-            document.getElementById('grade2').value = "B-"
-        }
-       else if(english >= 33){
-            document.getElementById('grade2').value = "C"
-        }
-        else{
-            document.getElementById('grade2').value = "F"
-        }
-       
-        // for math 
-
-        let math =document.getElementById('input3').value
-         if (math>= 90 ){
-             document.getElementById('grade3').value = "A+"
-        }
-        else if (math ==""){
-            document.getElementById('grade3').value="Insert"
-            document.getElementById('input3').value ="0"
-        }
-       else if(math >= 80){
-            document.getElementById('grade3').value = "A"
-        }
-        else if(math >= 70){
-            document.getElementById('grade3').value = "A-"
-        }
-        else if(math >= 60){
-            document.getElementById('grade3').value = "B+"
-        }
-        else if(math >= 50){
-            document.getElementById('grade3').value = "B"
-        }
-        else if(math >= 40){
-            document.getElementById('grade3').value = "B-"
-        }
-       else if(math >= 33){
-            document.getElementById('grade3').value = "C"
-        }
-        else{
-            document.getElementById('grade3').value = "F"
-        }
-
-        //for science
-        let science =document.getElementById('input4').value
-         if (science >= 90 ){
-             document.getElementById('grade4').value = "A+"
-        }
-       else if (science ==""){
-            document.getElementById('grade4').value="Insert"
-            document.getElementById('input4').value ="0"
-        }
-       else if(science >= 80){
-            document.getElementById('grade4').value = "A"
-        }
-        else if(science >= 70){
-            document.getElementById('grade4').value = "A-"
-        }
-        else if(science >= 60){
-            document.getElementById('grade4').value = "B+"
-        }
-        else if(science >= 50){
-            document.getElementById('grade4').value = "B"
-        }
-        else if(science >= 40){
-            document.getElementById('grade4').value = "B-"
-        }
-       else if(science >= 33){
-            document.getElementById('grade4').value = "C"
-        }
-        else{
-            document.getElementById('grade4').value = "F"
-        }
-    })
-
-    document.getElementById('btn').addEventListener('click',function(){
         let marks =document.getElementById('input1').value
             marks = parseInt(marks) 
-            
+
             english =document.getElementById('input2').value
             english = parseInt(english)
 
@@ -195,9 +70,6 @@
         totalMarks = marks + english + math + science
         
         document.getElementById('total-input').value = marks + english + math + science
-       
-       
-       
        
         if (totalMarks / 4 >= 90 ){
              document.getElementById('grade-result').value = "A+"
@@ -247,6 +119,38 @@
         }
       
     })
+    function gradeCount( input , grade ){
+        let marks =document.getElementById(input).value
+         if (marks >= 90 ){
+             document.getElementById(grade).value = "A+"
+        }
+       else if (marks ==""){
+        document.getElementById(grade).value="Insert"
+        document.getElementById(input).value ="0"
+        }
+       else if(marks >= 80){
+            document.getElementById(grade).value = "A"
+        }
+        else if(marks >= 70){
+            document.getElementById(grade).value = "A-"
+        }
+        else if(marks >= 60){
+            document.getElementById(grade).value = "B+"
+        }
+        else if(marks >= 50){
+            document.getElementById(grade).value = "B"
+        }
+        else if(marks >= 40){
+            document.getElementById(grade).value = "B-"
+        }
+       else if(marks >= 33){
+            document.getElementById(grade).value = "C"
+        }
+        else{
+            document.getElementById(grade).value = "F"
+        }
+
+    }
     
     </script>
 </div>
